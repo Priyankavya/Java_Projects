@@ -40,15 +40,7 @@ public class UserDaoImpl  implements userDao{
 		e.printStackTrace();
 		}
 		
-		finally {
-			try {
-				conn.close();
-			} catch (SQLException e) {
-				
-				e.printStackTrace();
-			}
-			
-		}
+		
 		
 		return null;
 	}

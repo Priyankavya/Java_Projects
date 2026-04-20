@@ -40,8 +40,9 @@ public class AuthenticationController extends HttpServlet {
 			
 			if(u!=null)
 			{
-				System.out.println("no user");
-				
+				request.setAttribute("errorMessage", "Invalid username or password");
+				RequestDispatcher dispatcher=request.getRequestDispatcher("jsp/Dashboard.jsp");
+				dispatcher.forward(request, response);
 			}
 			else
 			{

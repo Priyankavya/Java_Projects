@@ -37,7 +37,7 @@ public class BookController extends HttpServlet {
 		
 		if("showAddBook".equalsIgnoreCase(action))
 		{
-			request.setAttribute("errorMessage", "Invalid username or password");
+			request.setAttribute("errorMessage", "Invalid");
 			RequestDispatcher dispatcher=request.getRequestDispatcher("jsp/addBook.jsp");
 			dispatcher.forward(request, response);
 			
@@ -74,7 +74,7 @@ public class BookController extends HttpServlet {
 			
 			else
 			{
-				request.setAttribute("errorMessage", "Invalid username or password");
+				request.setAttribute("errorMessage", "something went wrongs");
 				RequestDispatcher dispatcher=request.getRequestDispatcher("jsp/addBook.jsp");
 				dispatcher.forward(request, response);
 			

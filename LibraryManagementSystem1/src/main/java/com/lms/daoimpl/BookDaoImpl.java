@@ -1,7 +1,8 @@
 package com.lms.daoimpl;
 
 import java.sql.Connection;
-import java.sql.Date;
+
+import java.util.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.List;
@@ -31,7 +32,8 @@ public class BookDaoImpl implements BookDao {
 			ps.setString(5, book.getPublisher());
 			ps.setInt(6, book.getTotalCopies());
 			ps.setInt(7, book.getAvailableCopies());
-			ps.setDate(8, (Date)book.getCreatedAt());
+
+ps.setDate(8, new java.sql.Date(book.getCreatedAt().getTime()));
 			
 			int i=ps.executeUpdate();
 			
